@@ -1,0 +1,51 @@
+.split-line{
+  text-align: center;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color:#666;
+  -webkit-user-select:none;        /*无法被选取*/
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  clear: both;
+  margin-top: 30px;
+}
+.split-line i{
+  width: 36px;
+  height:36px;
+  line-height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  -webkit-border-radius:50%;
+  margin:15px auto;
+  position: relative;
+}
+.split-line i:before{
+  width: 106px;
+  height: 2px;
+  position: absolute;
+  background-color: #ccc;
+  content: "";
+  top: 50%;
+  left:50%;
+  margin:0 0 0 28px;
+}
+.split-line i:after{
+  width: 106px;
+  height: 2px;
+  position: absolute;
+  background-color: #ccc;
+  content: "";
+  top: 50%;
+  left:50%;
+  margin:0 0 0 -134px;
+}
+
+
+.page-nav{
+  width: 90%;
+  margin:50px auto;
+}
+.page-nav .pagination{
+  text-align: center;
+}

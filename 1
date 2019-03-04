@@ -1,0 +1,34 @@
+$(".indicator-item").removeClass("active");
+$(".indicator-item").eq(length-1).addClass("active");
+}
+else{
+for(var i=0;i<length;i++)
+{
+  transl=1917*(i-index+1)+"px";
+  $(".carousel-item").eq(i).css("transform","translateX("+transl+")");
+}
+/*translate animate*/
+moveToSlide(index);
+$(".indicator-item").removeClass("active");
+$(".indicator-item").eq(index-1).addClass("active");
+}
+});
+$(".carousel-slider-right").on("click",function(){
+var length=$(".indicator-item").length;
+for(var i=0; i<length;i++)
+{
+if($(".indicator-item").eq(i).hasClass("active"))
+{
+break;
+}
+}
+var index=i;
+if(index==length-1)
+{
+  moveToSlide(0);
+}
+else{
+/*translate animate*/
+moveToSlide(index+1);
+}
+});*/

@@ -1,0 +1,253 @@
+
+
+
+
+.search-page{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px !important;
+    color: #6c6753;
+    position: fixed;
+    z-index: 4;
+    display: none;
+    left:40%;
+    transform: translateX(-50%);
+    top:30%;
+    transform: translateY(-50%);
+}
+.block-page{
+  width: 100%;
+  height:100%;
+  background-color: rgba(173, 172, 172, 0.6);
+  z-index: 4;
+  position: fixed;
+  display: none;
+}
+
+
+/* Resets */
+
+
+.search-page a:link,
+.search-page a:visited,
+.search-page a:hover,
+.search-page a:active {
+	color: inherit;
+}
+
+.search-page input,
+.search-page button {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: none;
+	background: none;
+}
+
+.search-page button {
+	background: none;
+	cursor: pointer;
+}
+
+.search-page input:focus,
+.search-page button:focus {
+	outline: none;
+}
+
+/* Generic */
+.search-page a:hover {
+	color: #ffa769;
+}
+
+.hide {
+	display: none;
+}
+
+
+/* Styling */
+
+
+
+
+/* Fahr/Cels toggle */
+.search-page .switch-btn {
+	clear: both;
+	margin-top: 3em;
+}
+
+
+.search-page .switch-btn > .cmd-toggle {
+	position: absolute;
+	top: 0; left: -9999px;
+}
+
+.search-page .switch-btn-label,
+.search-page .switch-btn > .units-label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.search-page .switch-btn-label {
+	position: relative;
+	width: 30px;
+	height: 4px;
+	background-color: #6c6753;
+	border-radius: 4px;
+	margin: 0 .5em;
+	cursor: pointer;
+}
+
+.search-page .switch-btn-label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -6px; left: 0;
+	margin-left: 0;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #6c6753;
+	transition: all 400ms ease;
+}
+
+.switch-btn > .cmd-toggle:checked + .switch-btn-label::before {
+	margin-left: calc(30px - 16px);
+}
+
+/* Top bar */
+.search-page .search-top {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	padding: .5em;
+}
+
+.search-page .information-data {
+	position: relative;
+	top: 0; left: 0;
+	width: 100%;
+	height: 1.8em;
+	font-size: 1.7rem !important;
+	text-align: left;
+	overflow: hidden;
+	border-bottom: 1px solid;
+}
+
+
+
+.search-page .information-data__input {
+	width: 100%;	/* Consider search-icon width */
+	padding: .3em 1.4em .3em 0;
+	opacity: 0;
+}
+
+.search-page .information-data__input:focus {
+	color: #ffa769;
+	opacity: 1;
+}
+
+.search-page .information-data__name,
+.search-page .information-data__search-btn {
+	position: absolute;
+	bottom: 0;
+	padding: .3em 0;	/* For proper alignment */
+}
+
+.search-page .information-data__name {
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: none;
+}
+
+.search-page .information-data__input:focus + .information-data__name {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.search-page .information-data__input,
+.search-page .information-data__name,
+.search-page .information-data__search-btn {
+	transition: all 200ms ease-out;
+}
+
+.search-page .information-data__search-btn {
+	right: 0;
+}
+
+
+.search-page .information-data__input:focus ~ .information-data__search-btn,
+.search-page .information-data__search-btn:active {
+	color: #ffa769;
+}
+
+.search-btn{
+  transform: translateY(10px);
+  font-size: 40px;
+}
+/* Date-Time */
+
+.search-page .datetime-data {
+	margin-top: .5em;
+}
+
+.search-page .datetime-data__date {
+	float: left;
+}
+.search-page .datetime-data__time {
+	float: right;
+}
+
+/* Main */
+.search-page .data {
+	clear: both;
+}
+
+.search-page .main-data {
+	display: inline-block;
+	width: auto;
+	padding-top: 2em;
+	padding-bottom: 3em;
+	text-align: left;
+}
+
+.search-page .main-data__weather-icon,
+.search-page .main-data__temp {
+	display: inline-block;
+	margin-right: -4px;
+	vertical-align: middle;
+}
+
+.search-page .main-data__weather-icon {
+	font-size: 5.1rem;
+}
+
+.search-page .main-data__temp {
+	padding-left: .3em;
+	font-size: 5.4rem;
+	text-align: left;
+	vertical-align: -25%;
+}
+
+.search-page .main-data__weather-descr,
+.search-page .main-data__temp-units {
+	font-size: 1.7rem;
+}
+
+.search-page .main-data__weather-descr {
+	margin-top: .3em;
+}
+
+.search-page .main-data__temp-units {
+	vertical-align: 1.1em;
+	margin-left: .2em;
+}
+
+
+.search-page .secondary-data > div {
+	width: 33.3333333%;
+	float: left;
+}
+
+.search-page .secondary-data > div > i {
+	margin-right: .3em;
+}

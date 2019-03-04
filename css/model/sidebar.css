@@ -1,0 +1,156 @@
+
+/* External CSS */
+
+
+.content{
+  height:800px;
+  position: relative;
+  margin:0 0 50px;
+}
+
+/* .side-barigation */
+
+.side-bar{
+  width: 300px;
+  height: 100%;
+  background: #333;
+  position: absolute;
+  top: 0; left: -236px;
+  z-index: 2;
+  transition: left .7s;
+  -webkit-transition: left .7s;
+}
+
+.side-bar:hover{
+  left: 0;
+}
+
+.side-bar:hover ~ #content{
+  opacity: .3;
+}
+
+.side-bar a, .side-bar a:hover{
+  text-decoration: none;
+}
+
+
+/* .side-barigation  -- Icon */
+
+.side-bar .icon{
+  width: 32px;
+  height: 32px;
+  float: right;
+  margin: 20px 16px 0 0;
+  font-size: 36px;
+  text-align: center;
+  line-height: 32px;
+  color: rgba(0,0,0,.3);
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
+}
+
+.side-bar:hover .icon{
+  opacity: 0;
+}
+
+
+/* .side-barigation -- Header */
+
+.side-bar header{
+  margin: 40px 20px 30px;
+}
+
+.side-bar header a{
+  font-size: 2.7em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: rgba(240,240,240,.7);
+}
+
+.side-bar header a:hover{
+  color: #eee;
+}
+
+
+/* .side-barigation -- Links */
+
+.side-bar ul{
+  padding-left: 0;
+  list-style: none;
+}
+
+.side-bar li a{
+  display: block;
+  border-left: 3px solid transparent;
+  padding: 16px 20px;
+  font-weight: 600;
+  	color: rgba(200,200,200,.5);
+}
+
+.side-bar li a:hover{
+  background: rgba(0,0,0,.1);
+  border-color: #1b9;
+  color: #eee;
+}
+
+.side-bar li a:before{
+  content: '';
+  width: 0;
+  height: 0;
+  display: inline-block;
+  margin: 3px 0 0 -20px;
+  border: 8px solid transparent;
+}
+
+.side-bar li a:hover:before{
+  border-left-color: #1b9;
+}
+
+
+/* Content */
+
+#content{
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  position: relative;
+  top: 0; left: 0;
+  z-index: 1;
+  overflow: auto;
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
+}
+
+#content #wrap{
+  min-width: 900px;
+  width: 1100px;
+  min-height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0; left: 50%;
+  margin-left: -550px;
+  padding: 30px 20px;
+}
+
+#content h1{
+  font-size: 3.2em;
+  font-weight: 300;
+  color: #444;
+}
+
+#content p{
+  padding: 4px 0;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 1000px){
+  #content{
+    background: #fff;
+  }
+
+  #content #wrap{
+    width: 90%;
+    left: auto;
+    margin-left: 10%;
+  }
+}

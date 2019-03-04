@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ededed;
+            padding: 0 20px;
+            margin: 0;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 80px 0;
+        }
+        header{
+          display: block;
+          transform-origin: top;
+          transition: rotateX 2s;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        ul a {
+            display: block;
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            padding: 7px 15px;
+        }
+
+        ul>span {
+            position: absolute;
+            border-bottom: 4px solid transparent;
+            z-index: -1;
+            transform: translateX(-60px);
+        }
+
+        ul a,
+        ul>span {
+            transition: all .35s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hover or tab over the links</h1>
+<header>
+    <ul c-hover-after>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Company</a></li>
+        <li><a href="">Work</a></li>
+        <li><a href="">Clients</a></li>
+        <li><a href="">Contact</a></li>
+        <span></span>
+    </ul>
+  </header>
+    <script>
+        'use strict';
+
+        var colors = ['deepskyblue', 'orange', 'firebrick', 'gold', 'magenta', 'black', 'darkblue'];
+
+        var navSelector = '[c-hover-after]';
+        var linkSelector = navSelector + ' > * > a';
+        var targetSelector = navSelector + ' > span';
+
+        Array.from(document.querySelectorAll(navSelector)).forEach(function(menu) {
+            var target = menu.querySelector(targetSelector);
+
+            menu.addEventListener('focusin', onenter);
+            menu.addEventListener('pointerover', onenter);
+
+            window.addEventListener('resize', onresize);
+
+            function onenter(event) {
+                var target = event.target.closest(linkSelector);
+
+                if (target) {
+                    styleTargetBy(target);
+                }
+            }
+
+            function onresize() {
+                if (document.activeElement.closest(linkSelector)) {
+                    styleTargetBy(document.activeElement);
+                } else {
+                    target.style.width = '';
+                }
+            }
+
+            function styleTargetBy(source) {
+                var rect = source.getBoundingClientRect();
+
+                target.style.width = rect.width + 'px';
+                target.style.height = rect.height + 'px';
+                target.style.left = rect.left + window.pageYOffset + 'px';
+                target.style.top = rect.top + window.pageYOffset + 'px';
+                target.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+                target.style.transform = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

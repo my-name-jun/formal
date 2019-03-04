@@ -1,0 +1,378 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
+
+$background:#f9fde4;
+$ribbonShadow:#945252;
+$ribbon:#e76b6b;
+$shadow:#9ca594;
+$tiempo:7s;
+ 
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content; 
+  } 
+}
+
+html{background:$background;}
+
+.wrapper{
+  margin:20% auto;
+  width:400px;  
+  position:relative;
+}
+
+.ribbon{
+  width:300px; 
+  height:83px;
+  background:$ribbonShadow;
+  position:absolute;
+  clip: rect(0px, 301px, 104px, 301px); 
+  @include rotate(-15deg);
+  animation-name:ribbon;
+  animation-duration: $tiempo;
+  animation-timing-function:linear; 
+  animation-iteration-count:infinite;
+  &::after{
+    content:""; 
+    width: 0;
+    height: 0;
+    position:absolute;
+    margin-left:250px;  
+    border-top: 41px solid transparent;
+    border-right: 51px solid $background;
+    border-bottom: 41px solid transparent; 
+  }
+} 
+.ribbon-2{
+  width: 350px; 
+  height: 83px;
+  margin-top:62px;
+  position:absolute; 
+  background:$ribbon;
+  overflow:hidden;
+  clip: rect(0px, 0px, 84px, 0px);
+  @include skew(7deg, 7deg); 
+  z-index:3;
+    animation-name:ribbon-2;
+    animation-duration: $tiempo;  
+    animation-timing-function:linear;
+   animation-iteration-count:infinite;
+}
+.ribbon-3{
+  width:320px; 
+  height:83px;
+  background:$ribbonShadow;
+  position:absolute;  
+  margin-top:126px;
+  margin-left:29px; 
+ clip:rect(0px, 322px, 94px, 321px);
+  @include rotate(-15deg);
+  z-index:2;
+    animation-name:ribbon-3;
+    animation-duration: $tiempo;
+    animation-timing-function:linear;
+   animation-iteration-count:infinite;
+}
+.ribbon-4{
+  width: 260px; 
+  height: 83px;
+  margin-top:184px;
+  margin-left:29px;
+  position:absolute;
+  background:$ribbon;
+ clip:rect(0px, 0px, 94px, -1px);
+  @include skew(7deg, 7deg); 
+  z-index:3;
+    animation-name:ribbon-4;
+    animation-duration: $tiempo;
+    animation-timing-function:linear;
+   animation-iteration-count:infinite;
+}
+.ribbon-5{
+  width:200px; 
+  height:83px;
+  background:$ribbonShadow;
+  position:absolute;
+  margin-top:256px; 
+  margin-left:86px; 
+ clip:rect(0px, 201px, 94px, 201px);
+  @include rotate(-30deg); 
+    animation-name:ribbon-5;
+    animation-duration:$tiempo;
+    animation-timing-function:linear;
+   animation-iteration-count:infinite; 
+  &::after{
+    content:"";
+    width: 0;
+    height: 0;
+    position:absolute;
+    margin-left:-1px;   
+    border-top: 41px solid transparent;
+    border-left: 51px solid $background;
+    border-bottom: 41px solid transparent; 
+  }
+}  
+
+
+.text-wrapper {
+  color:white;
+  text-transform:uppercase;
+  font-family: 'Comfortaa', cursive;
+  font-size:2.5em;
+  font-weight:700;
+  margin-left:40px;
+  position:relative;
+  height:83px;
+  @include skew(-7deg, -7deg); 
+  div{
+    position:relative;
+    float:left;
+    opacity:0;
+    margin:0 3px;
+    &:nth-child(1){
+       transform:translateY(-60px); 
+      animation-name:spanAnimate;
+      animation-duration:$tiempo;
+      animation-timing-function:ease;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(2){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-2;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(3){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-3;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(4){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-4;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(5){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-5;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(6){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-6;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(7){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-7;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+    &:nth-child(8){
+       transform:translateY(-90px); 
+      animation-name:spanAnimate-8;
+      animation-duration:$tiempo;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite; 
+    }
+  }
+}
+
+.right {
+  position:absolute;
+   margin-left:470px;
+   margin-top:-50px;
+  .angle1{margin-left:20px;}
+  .angle2{margin-left:20px;}
+  clip:rect(82px, 0px, 350px, 0px);
+   animation-name:rightShine;
+   animation-duration:$tiempo;
+   animation-timing-function:linear;
+   animation-iteration-count:infinite; 
+}
+.left {
+  position:absolute;
+   margin-left:-180px; 
+   margin-top:-50px;
+  .angle1{margin-left:-20px;}
+  .angle2{margin-left:-20px;}
+  clip:rect(80px, 77px, 346px, 71px);
+   animation-name:LeftShine;
+   animation-duration:$tiempo;
+   animation-timing-function:linear;
+   animation-iteration-count:infinite; 
+}
+.line{
+    width:70px;
+    height:10px; 
+    margin:100px 0;
+    border-radius:20px;
+    background:$ribbon;
+  } 
+.angle1{
+  @include rotate(30deg);
+}
+.angle2{
+  @include rotate(-30deg);
+}
+@include keyframes(ribbon) {
+  0%{clip: rect(0px, 301px, 104px, 301px);} 
+  10%{clip: rect(0px, 301px, 104px, 301px);} 
+  12%{clip: rect(0px, 301px, 104px, -33px);} 
+  90%{clip: rect(0px, 301px, 104px, -33px);}
+  92%{clip: rect(0px, 301px, 104px, 301px);}
+  100%{clip: rect(0px, 301px, 104px, 301px);}  
+}
+
+@include keyframes(ribbon-2) {
+0%{clip: rect(0px, 0px, 84px, 0px);}
+12%{clip: rect(0px, 0px, 84px, 0px);}  
+14%{clip: rect(0px, 351px, 84px, 0px);}
+88% {clip: rect(0px, 351px, 84px, 0px);}   
+90%{ clip: rect(0px, 0px, 84px, 0px);}  
+100%{ clip: rect(0px, 0px, 84px, 0px);}
+}
+
+@include keyframes(ribbon-3) {
+0%{clip: rect(0px, 322px, 94px, 321px)}
+14%{clip: rect(0px, 322px, 94px, 321px)}  
+16%{ clip: rect(0px, 322px, 94px, 0px)}
+86%{ clip: rect(0px, 322px, 94px, 0px)}  
+88% {clip: rect(0px, 322px, 94px, 321px);}
+100%{clip: rect(0px, 322px, 94px, 321px)}
+}
+
+@include keyframes(ribbon-4){
+  0%{clip: rect(0px, 0px, 94px, -1px)}
+  16%{clip: rect(0px, 0px, 94px, -1px)}
+  18%{clip: rect(0px, 262px, 94px, -1px)}
+  84%{clip: rect(0px, 262px, 94px, -1px)}
+  86%{clip: rect(0px, 0px, 94px, -1px)}
+  100%{clip: rect(0px, 0px, 94px, -1px)}
+}
+@include keyframes(ribbon-5){
+  0%{clip: rect(0px, 201px, 94px, 201px)}
+  18%{clip: rect(0px, 201px, 94px, 201px)}
+  20%{clip: rect(0px, 201px, 94px, -1px)}
+  82%{clip: rect(0px, 201px, 94px, -1px)}
+  84%{clip: rect(0px, 201px, 94px, 201px)}
+  100%{clip: rect(0px, 201px, 94px, 201px)}
+}
+
+@include keyframes(spanAnimate){
+  10%{transform: translateY(-50px);opacity:0;}
+  16%{transform: translateY(4px);opacity:1;}
+  19%{transform: translateY(-4px);opacity:1;}
+  22%{transform: translateY(0);opacity:1;}
+  70%{transform: translateY(0);opacity:1;} 
+  73%{transform: translateY(5px);opacity:1;}
+  80%{transform: translateY(-60px);opacity:1;}
+  100%{transform: translateY(-60px);opacity:0;}
+}
+@include keyframes(spanAnimate-2){
+  12%{transform: translateY(-50px);opacity:0;}
+  18%{transform: translateY(9px);opacity:1;}
+  21%{transform: translateY(1px);opacity:1;}
+  24%{transform: translateY(5px);opacity:1;}
+  67%{transform: translateY(5px);opacity:1;} 
+  70%{transform: translateY(10px);opacity:1;} 
+  77%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;} 
+}
+@include keyframes(spanAnimate-3){
+  14%{transform: translateY(-50px);opacity:0;}
+  20%{transform: translateY(14px);opacity:1;}
+  23%{transform: translateY(4px);opacity:1;}
+  26%{transform: translateY(9px);opacity:1;}
+  64%{transform: translateY(9px);opacity:1;} 
+  67%{transform: translateY(14px);opacity:1;} 
+  74%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;}   
+}
+@include keyframes(spanAnimate-4){
+  16%{transform: translateY(-50px);opacity:0;}
+  22%{transform: translateY(19px);opacity:1;}
+  25%{transform: translateY(9px);opacity:1;}
+  28%{transform: translateY(14px);opacity:1;}
+  61%{transform: translateY(14px);opacity:1;} 
+  64%{transform: translateY(19px);opacity:1;} 
+  71%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;}   
+} 
+@include keyframes(spanAnimate-5){
+  18%{transform: translateY(-50px);opacity:0;}
+  24%{transform: translateY(24px);opacity:1;}
+  27%{transform: translateY(14px);opacity:1;}
+  30%{transform: translateY(19px);opacity:1;}
+  58%{transform: translateY(19px);opacity:1;}  
+  62%{transform: translateY(24px);opacity:1;} 
+  68%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;}   
+}  
+@include keyframes(spanAnimate-6){
+  20%{transform: translateY(-50px);opacity:0;}
+  26%{transform: translateY(29px);opacity:1;}
+  29%{transform: translateY(19px);opacity:1;}
+  32%{transform: translateY(24px);opacity:1;}
+  55%{transform: translateY(24px);opacity:1;} 
+  59%{transform: translateY(29px);opacity:1;} 
+  66%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;}   
+} 
+@include keyframes(spanAnimate-7){
+  22%{transform: translateY(-50px);opacity:0;}
+  28%{transform: translateY(34px);opacity:1;}
+  31%{transform: translateY(24px);opacity:1;}
+  34%{transform: translateY(29px);opacity:1;}
+  52%{transform: translateY(29px);opacity:1;} 
+  56%{transform: translateY(34px);opacity:1;} 
+  63%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;}   
+} 
+@include keyframes(spanAnimate-8){
+  24%{transform: translateY(-50px);opacity:0;}
+  30%{transform: translateY(39px);opacity:1;}
+  33%{transform: translateY(28px);opacity:1;}
+  36%{transform: translateY(34px);opacity:1;}
+  48%{transform: translateY(34px);opacity:1;} 
+  52%{transform: translateY(39px);opacity:1;} 
+  59%{transform: translateY(-60px);opacity:1;} 
+  100%{transform: translateY(-60px);opacity:0;}   
+}  
+
+@include keyframes(rightShine){
+  21%{clip:rect(82px, 0px, 350px, 0px);}
+  23%{clip:rect(82px, 86px, 350px, 0px);}
+  80%{clip:rect(82px, 86px, 350px, 0px);} 
+  86%{clip:rect(82px, 86px, 350px, 350px);} 
+  100%{clip:rect(82px, 86px, 350px, 350px);}    
+}  
+
+@include keyframes(LeftShine){
+  21%{clip:rect(80px, 77px, 346px, 71px)}
+  23%{clip:rect(82px, 86px, 350px, -27px);}
+  80%{clip:rect(82px, 86px, 350px, -27px);} 
+  86%{clip:rect(82px, -86px, 350px, -27px);} 
+  100%{clip:rect(82px, -86px, 350px, -27px);}    
+}  

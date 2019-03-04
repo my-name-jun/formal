@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="" lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <!--告诉IE使用最新的引擎渲染，如果安装了谷歌，则使用谷歌框架渲染-->
+        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="网页描述内容">
+        <meta name="keywords" content="网页关键字"></meta>
+        <!--禁止移动端浏览器缩放行为-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--当前页面引用图标-->
+        <!--pc端-->
+        <!--icon  后面自定义-->
+        <link rel="icon" href="icon/apple-touch-icon.png" />
+        <!--移动端-->
+        <link rel="Bookmark" href="icon/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="icon/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="icon/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!--这个脚本为IE8提供html5垫片脚本，以便浏览器识别h5分区标签-->
+        <script src="js/modernizr-2.8.3.min.js"></script>
+        <style>
+            body {
+                background: #efefef;
+            }
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+                font-size: 20px;
+            }
+            
+            .panel-default>.panel-heading {
+                background: transparent;
+                padding-bottom: 20px;
+                border: 0;
+            }
+            
+            .panel-default>.panel-heading {
+                color: #333;
+                border-color: #ddd;
+            }
+            
+            .panel-heading {
+                padding: 10px 15px 10px 4px;
+                border-bottom: 1px solid transparent;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+            
+            .index-four-top,
+            .index-four-bot {
+                width: 1240px;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-left: 23px;
+            }
+            
+            .index-four-top-right,
+            .index-four-bot-right {
+                width: 590px;
+                overflow: hidden;
+                float: left;
+                margin-left: 30px;
+            }
+            
+            .index-four-top-left,
+            .index-four-bot-left {
+                float: left;
+                overflow: hidden;
+                width: 586px;
+            }
+            
+            .panel-heading .more {
+                float: right;
+                font-size: 12px;
+                color: #6f6f6f;
+                margin-top: 15px;
+            }
+            
+            a:hover {
+                color: #8f002f;
+            }
+            
+            ul,
+            li {
+                list-style: none;
+                margin: 0;
+                border: none;
+                padding: 0;
+            }
+            
+            a {
+                color: #333;
+                text-decoration: none;
+                outline: none;
+                font-weight: normal;
+            }
+            
+            .pull-right {
+                float: right!important;
+            }
+            
+            .panel-border {
+                overflow: hidden;
+                padding: 0 12px 10px;
+                border-bottom: 4px solid rgb(165, 176, 194);
+            }
+            
+            .mytitle {
+                font-size: 20px;
+                font-weight: bold;
+                font-family: "Helvetica Neue", "Hiragino Sans GB", "Verdana", "Microsoft YaHei", "Arial", "sans-serif";
+                color: #000;
+            }
+            
+            .newslist_dt {
+                padding-bottom: 30px;
+            }
+            
+            .newslist_dt li {
+                box-sizing: content-box;
+                border-bottom: 1px dotted #b7b7b7;
+                padding: 23px 0;
+                height: 61px;
+            }
+            
+            .idx_newslist1 li {
+                padding: 16px 0;
+            }
+            
+            .newslist_dt li .time {
+                float: left;
+                position: relative;
+                background: url(img/icon5.gif) no-repeat left top;
+                width: 61px;
+                height: 61px;
+                overflow: hidden;
+                margin-top: 5px;
+            }
+            
+            .newslist_dt li .time .t1 {
+                position: absolute;
+                top: 19px;
+                left: 11px;
+            }
+            
+            .newslist_dt li .time .t2 {
+                position: absolute;
+                bottom: 17px;
+                right: 11px;
+            }
+            
+            .newslist_dt li .time span {
+                font-size: 14px;
+                color: #484848;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .newslist_dt li .info {
+                float: left;
+                margin-left: 15px;
+                width: 815px;
+            }
+            
+            .idx_newslist1 li .info {
+                width: 510px;
+            }
+            
+            .newslist_dt li .info h3 a {
+                color: #3f3f3f;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            
+            .newslist_dt li .info p {
+                color: #605f5f;
+                font-size: 12px;
+                line-height: 180%;
+                margin-top: 5px;
+                width: 98%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            
+            .idx_newslist1 li .info h3 a {
+                font-weight: normal;
+            }
+            
+            .index-tea {
+                width: 582px;
+                height: 390px;
+                margin-bottom: 16px;
+                border: 1px solid #000;
+            }
+            
+            .index-tec-box,
+            .index-tec-box2 {
+                width: 582px;
+                height: 390px;
+                margin: 10px auto;
+            }
+            
+            .index-tec-box img,
+            .index-tec-box2 img {
+                position: absolute;
+                width: 582px;
+                height: 390px;
+                transition: all 0.35s
+            }
+            
+            .index-tec-box-abs {
+                width: 582px;
+                height: 390px;
+                position: absolute;
+                overflow: hidden;
+                display: none;
+            }
+            
+            .index-tec-box-text {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.55);
+                color: white;
+                font-size: 18px;
+                letter-spacing: 3px;
+                padding: 8px 0 8px 32px;
+            }
+            
+            .index-tec-box-left,
+            .index-tec-box-right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: #fff;
+                background: #66AFE9;
+                font-size: 24px;
+                line-height: 41px;
+                height: 41.4px;
+                width: 42px;
+                text-align: center;
+                cursor: pointer;
+            }
+            
+            .index-tec-box-href {
+                color: white;
+                width: 582px;
+                height: 348px;
+                background: rgba(0, 0, 0, 0.45);
+                position: absolute;
+                top: -582px;
+                transition: all 0.35s;
+                font-size: 20px;
+                text-decoration: none;
+            }
+            
+            .index-tec-box-click1,
+            .index-tec-box-click2 {
+                padding: 10px 0;
+                width: 120px;
+                margin: 0 auto;
+                padding-left: 30px;
+                letter-spacing: 24px;
+            }
+            
+            .index-tec-box-click1 {
+                border-bottom: 1.5px solid white;
+                margin: 88px auto 0;
+            }
+            
+            .index-tec-box-href:hover {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--让IE8以下浏览器支持@media媒体查询属性-->
+        <!--[if lt IE 9]>
+      		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js "></script>
+		<![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <div class="index-four-top">
+            <div class="index-four-top-left">
+                <div class="index-four-title panel-default">
+                    <div class="panel-heading">
+                        <!--<i class="fa fa-link"></i>-->
+                        <span class="panel-border">
+                            <img src="img/computer_home_news_20.png" style="width: 22px;height: 22px;position: relative;top: -3px;left: -4px;" />
+                            <span class="mytitle">综合新闻 </span>
+                        </span>
+                        <a href="./xwyhd/dzxx/" class="more">更多&gt;&gt;</a>
+                        <div class="pull-right" style=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="newslist_dt idx_newslist1">
+                    <ul>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="index-four-top-right">
+                <div class="index-four-title panel-default">
+                    <div class="panel-heading">
+                        <!--<i class="fa fa-link"></i>-->
+                        <span class="panel-border">
+                            <img src="img/computer_home_news_20.png" style="width: 22px;height: 22px;position: relative;top: -3px;left: -4px;" />
+                            <span class="mytitle">综合新闻 </span>
+                        </span>
+                        <a href="./xwyhd/dzxx/" class="more">更多&gt;&gt;</a>
+                        <div class="pull-right" style=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="index-tec-box">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="index-four-bot">
+            <div class="index-four-bot-left">
+                <div class="index-four-title panel-default">
+                    <div class="panel-heading">
+                        <!--<i class="fa fa-link"></i>-->
+                        <span class="panel-border">
+                            <img src="img/computer_home_news_20.png" style="width: 22px;height: 22px;position: relative;top: -3px;left: -4px;" />
+                            <span class="mytitle">综合新闻 </span>
+                        </span>
+                        <a href="./xwyhd/dzxx/" class="more">更多&gt;&gt;</a>
+                        <div class="pull-right" style=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="index-tec-box2">
+                </div>
+            </div>
+            <div class="index-four-bot-right">
+                <div class="index-four-title panel-default">
+                    <div class="panel-heading">
+                        <!--<i class="fa fa-link"></i>-->
+                        <span class="panel-border">
+                            <img src="img/computer_home_news_20.png" style="width: 22px;height: 22px;position: relative;top: -3px;left: -4px;" />
+                            <span class="mytitle">综合新闻 </span>
+                        </span>
+                        <a href="./xwyhd/dzxx/" class="more">更多&gt;&gt;</a>
+                        <div class="pull-right" style=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="newslist_dt idx_newslist1">
+                    <ul>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time"><span class="t1">09</span><span class="t2">06</span></div>
+                            <div class="info">
+                                <h3><a href="./xwyhd/zxdt/2017f/201709/t20170906_44653.html">延安新区党政代表团到访我校</a></h3>
+                                <p>2017年9月2日，延安新区党工委副书记、延安市新区管委会主任薛鹏春一行到访我校，俞峰院长在南大殿会见来访，双方就开展交流合作事宜进行了商谈。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>
+            $(function() {
+
+                var $teaBox = $('.index-tec-box');
+                var $teaBox2 = $('.index-tec-box2');
+                var $names = new Array("李仲麟", "邓春晖", "岑有文", "蔡沂", "周小明", "王素丽", "胡赟", "林煜东", "邓一星", "郑馥丹",
+                    "袁俐萍", "秦映波", "余小华", "肖皇培", "吴丽镐", "卢珍", "阳平华", "罗世庄", "詹涌强", "杨柱学", "李成炼", "韦婷"
+                );
+                var index = 0;
+                for(var i = 1; i < 23; ++i) {
+                    var $div = null;
+                    var $divs = null;
+                    if(i == 1) {
+                        $div = $('<div class="index-tec-box-abs" style="z-index:' + (23 - i) + ';display:block;" ></div>');
+                    } else {
+                        $div = $('<div class="index-tec-box-abs" style="z-index:' + (23 - i) + '" ></div>');
+                    }
+                    var img = $('<img src="img/tec' + i + '.jpg" />');
+                    var texts = $('<div class="index-tec-box-text" style="z-index:25;">' + $names[i - 1] + '</div>')
+                    var left = $('<div class="index-tec-box-left" style="z-index:26; right: 44px;" onselectstart="return false">&lt;</div>');
+                    var right = $('<div class="index-tec-box-right" style="z-index:26;" onselectstart="return false">&gt;</div>');
+                    var href = $('<a href="#" class="index-tec-box-href"><div class="index-tec-box-click1">点击</div><div class="index-tec-box-click2">查看</div></a>')
+                    $div.append(texts);
+                    $div.append(left);
+                    $div.append(right);
+                    $div.append(img);
+                    $div.append(href);
+                    $teaBox2.append($div);
+                }
+                for(var i = 1; i < 23; ++i) {
+                    var $div = null;
+                    var $divs = null;
+                    if(i == 1) {
+                        $div = $('<div class="index-tec-box-abs" style="z-index:' + (23 - i) + ';display:block;" ></div>');
+                    } else {
+                        $div = $('<div class="index-tec-box-abs" style="z-index:' + (23 - i) + '" ></div>');
+                    }
+                    var img = $('<img src="img/tec' + i + '.jpg" />');
+                    var texts = $('<div class="index-tec-box-text" style="z-index:25;">' + $names[i - 1] + '</div>')
+                    var left = $('<div class="index-tec-box-left" style="z-index:26; right: 44px;" onselectstart="return false">&lt;</div>');
+                    var right = $('<div class="index-tec-box-right" style="z-index:26;" onselectstart="return false">&gt;</div>');
+                    var href = $('<a href="#" class="index-tec-box-href"><div class="index-tec-box-click1">点击</div><div class="index-tec-box-click2">查看</div></a>')
+                    $div.append(texts);
+                    $div.append(left);
+                    $div.append(right);
+                    $div.append(img);
+                    $div.append(href);
+                    $teaBox.append($div);
+                }
+
+                var $imgAbs = $('.index-tec-box .index-tec-box-abs');
+                var $imgAbs1 = $('.index-tec-box2 .index-tec-box-abs');
+                var $left = $('.index-tec-box .index-tec-box-left');
+                var $right = $('.index-tec-box .index-tec-box-right');
+                var $left1 = $('.index-tec-box2 .index-tec-box-left');
+                var $right1 = $('.index-tec-box2 .index-tec-box-right');
+                var $href = $('.index-tec-box-href');
+                var clickTime = new Date();
+                var hoverTime = new Date();
+                var imgTime = setInterval(function() {
+                    clickFun(1, 1);
+                    clickFun(1, 2);
+                }, 1700);
+                $teaBox.mouseover(function() {
+                    clearInterval(imgTime);
+
+                });
+                $teaBox.mouseout(function() {
+                    imgTime = setInterval(function() {
+                        clickFun(1, 1);
+                        clickFun(1, 2);
+                    }, 1700);
+                });
+                $left.on('click', function() {
+                    clickFun(2, 1);
+                });
+
+                $right.on('click', function() {
+                    clickFun(1, 1);
+                });
+                $left1.on('click', function() {
+                    clickFun(2, 2);
+                });
+
+                $right1.on('click', function() {
+                    clickFun(1, 2);
+                });
+                $imgAbs.children('img').mouseover(function() {
+                    if(new Date() - hoverTime > 80) {
+                        hoverTime = new Date();
+                        $(this).stop(true, false).css({
+                            "transform": "scale(1.1)"
+                        });
+                        $(this).siblings('a').stop(true, false).css({
+                            "top": 0,
+                            "transition": "all 0.35s"
+                        });
+                    }
+                });
+                $imgAbs.children('a').mouseleave(function() {
+                    if(new Date() - hoverTime > 80) {
+                        hoverTime = new Date();
+                        $(this).siblings('img').stop(true, false).css({
+                            "transform": "scale(1)"
+                        });
+                        $(this).stop(true, false).css({
+                            "top": "-586px",
+                            "transition": "all 0.35s"
+                        });
+                    }
+                });
+                $imgAbs1.children('img').mouseover(function() {
+                    if(new Date() - hoverTime > 80) {
+                        hoverTime = new Date();
+                        $(this).stop(true, false).css({
+                            "transform": "scale(1.1)"
+                        });
+                        $(this).siblings('a').stop(true, false).css({
+                            "top": 0,
+                            "transition": "all 0.35s"
+                        });
+                    }
+                });
+                $imgAbs1.children('a').mouseleave(function() {
+                    if(new Date() - hoverTime > 80) {
+                        hoverTime = new Date();
+                        $(this).siblings('img').stop(true, false).css({
+                            "transform": "scale(1)"
+                        });
+                        $(this).stop(true, false).css({
+                            "top": "-586px",
+                            "transition": "all 0.35s"
+                        });
+                    }
+                });
+
+                function clickFun(obj, imgN) {
+                    if(new Date() - clickTime > 1000) {
+                        clickTime = new Date();
+                        if(obj == 1) {
+                            index++;
+                            if(index > $names.length - 1) {
+                                index = 0;
+                            }
+                        } else {
+                            index--;
+                            if(index < 0) {
+                                index = $names.length - 1;
+                            }
+                        }
+                        if(imgN == 1) {
+                            $imgAbs.eq(index).stop(true, false).fadeIn(500).siblings().stop(true, false).fadeOut(500);
+                            $imgAbs.each(function(index) {
+                                $(this).children('a').css({
+                                    "top": "-586px",
+                                    "transition": 0
+                                });
+                            });
+                        } else {
+                            $imgAbs1.eq(index).stop(true, false).fadeIn(500).siblings().stop(true, false).fadeOut(500);
+                            $imgAbs1.each(function(index) {
+                                $(this).children('a').css({
+                                    "top": "-586px",
+                                    "transition": 0
+                                });
+                            });
+                        }
+                    }
+                }
+            });
+        </script>
+        <script>
+            window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')
+        </script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                    function() {
+                        (b[l].q = b[l].q || []).push(arguments)
+                    });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+
+</html>

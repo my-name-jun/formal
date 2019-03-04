@@ -1,0 +1,77 @@
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  position: relative;
+}
+
+.current-page-name .blur-container {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.current-page-name .blur-container::before, .current-page-name .blur-container::after {
+  top: 0px;
+  left: 0px;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+.current-page-name .blur-container .container-fluid {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.current-page-name .blur-container .blur-box {
+  display: block;
+  position: relative;
+  left:50%;
+  margin-left: -150px;
+}
+.current-page-name .blur-container .blur-box::before, .current-page-name .blur-container .blur-box::after {
+  top: 0px;
+  left: 0px;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+.current-page-name .blur-container.blur-1 {
+  color: #444;
+  padding: 0px 20px;
+  background-image: var(--bg);
+}
+.current-page-name .blur-container.blur-1 .blur-box {
+  width: 100%;
+  height: 120px;
+  max-width: 300px;
+  align-items: center;
+}
+.current-page-name .blur-container.blur-1 .blur-box h2 {
+  font-size: 40px;
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  color:inherit;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.current-page-name .blur-container.blur-1 .blur-box::before {
+  z-index: 10;
+  opacity: 0.5;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  background-color: #fff;
+}
+.current-page-name .blur-container.blur-1 .blur-box::after {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  background-image: var(--bg);
+}
